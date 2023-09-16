@@ -1,0 +1,3 @@
+-*git config pull.rebase false - usefull for branch merging
+-Try not to confuse git by editing in multipul places. Just commit and push things to keep another copy of them online
+-Good for backing up and working with other people, pretty simple
