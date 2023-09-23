@@ -11,7 +11,13 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 + High Score Boards
 ### Technologies
 *** Technologies will be used in the following ways:***
--** HTML: ** Using correct structure for the three HTML pages, login, play, and high score.
--** CSS: ** Used for styling to make the application aesthetically pleasing and enjoyable. Smart use of spacing and colors.
--** Java Script: ** Provides Login and player interaction with the system.
--** 
+- ** HTML: ** Using correct structure for the three HTML pages, login, play, and high score.
+- ** CSS: ** Used for styling to make the application aesthetically pleasing and enjoyable. Smart use of spacing and colors.
+- ** Java Script: ** Provides Login and player interaction with the system.
+- ** Service: ** Backend service with endpoints for:
++ Login
++ Receiving times
++ Updating times
+- ** DB: ** Store high scores, users and fastest time.
+- ** Login: ** Register and login users, play not allowed without login.
+- ** Websocket Data: ** Generates High Scores every time a player starts and ends game.
