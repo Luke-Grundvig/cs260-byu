@@ -4,3 +4,7 @@
 -Dig can get the IP address of a website with default commands
 Set up DNS and HTTP conncetion. Provision instance. Also EC2 instance
 inbound rule allow 0.0.0.0/0
+Domain/Hosted zones/registered domain/create record (ttl about 300 seconds) 
+in hosted zones add a record for all your domains and sub domains
+
+on simon.(my domain) and on startup.(my domain) do the HTML
