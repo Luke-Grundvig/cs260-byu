@@ -27,3 +27,15 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 - **DB:** Store high scores, users and fastest time.
 - **Login:** Register and login users, play not allowed without login.
 - **Websocket Data:** Generates High Scores every time a player starts and ends game.
+
+  ### HTML deliverable
+**For the HTML deliverable I started the basic structure for the applicaiton in HTML**
+- **HTML pages:** Three HTML pages, one for login, another for High score diplay and the third for gameplay
+- **Links:** Each pages links to the others via a shared navigation bar
+- **Text:** There is a short (placeholder) description box on the gameplay page on how to play
+- **3rd party service calls:** Didn't know about this, will try to include it eventually
+-  **Images:** Image of outlaw on gameplay page (will be updated)
+- **Login:** User name and password text boxes
+- **DB:** Table on high score page for player high scores represents data stored in DB
+- **WebSocket:** The current players scores will be updated real time in the database
+
