@@ -32,7 +32,10 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 **For the HTML deliverable I started the basic structure for the applicaiton in HTML**
 - **HTML pages:** Three HTML pages, one for login, another for High score diplay and the third for gameplay
 - **Links:** Each pages links to the others via a shared navigation bar
-- **UL navigation bar:** For ease of access and consistency the navigation bar is on each page
+- **Text:** There is a short (placeholder) description box on the gameplay page on how to play
+- **3rd party service calls:** Didn't know about this, will try to include it eventually
+-  **Images:** Image of outlaw on gameplay page (will be updated)
 - **Login:** User name and password text boxes
-- **DB:** Table on high score page for player high scores
+- **DB:** Table on high score page for player high scores represents data stored in DB
+- **WebSocket:** The current players scores will be updated real time in the database
 
