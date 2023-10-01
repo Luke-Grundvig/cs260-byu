@@ -8,3 +8,6 @@ Domain/Hosted zones/registered domain/create record (ttl about 300 seconds)
 in hosted zones add a record for all your domains and sub domains
 
 on simon.(my domain) and on startup.(my domain) do the HTML
+
+USE: ssh -i /Users/lukegrundvig/Downloads/lukegrundvig.pem ubuntu@western-showdown.click
+for acessing shell of website
