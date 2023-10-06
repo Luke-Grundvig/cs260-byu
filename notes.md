@@ -11,3 +11,6 @@ on simon.(my domain) and on startup.(my domain) do the HTML
 
 USE: ssh -i /Users/lukegrundvig/Downloads/lukegrundvig.pem ubuntu@western-showdown.click
 for acessing shell of website
+
+Use orientation and aside to hide parts if the screen is too small
+
