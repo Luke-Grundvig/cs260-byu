@@ -13,4 +13,5 @@ USE: ssh -i /Users/lukegrundvig/Downloads/lukegrundvig.pem ubuntu@western-showdo
 for acessing shell of website
 
 Use orientation and aside to hide parts if the screen is too small
+realtime colors gives good color waves and matching colors
 
