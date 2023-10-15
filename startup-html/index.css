@@ -3,17 +3,20 @@
 body {
     font-family: 'IBM Plex Mono';
     display: flex;
-    flex-direction: column;
     min-width: 375px;
     min-height: 400px;
     justify-content: center;
+    align-items: center;
 }
 
 ul.navbar {
+    top: 10px;
+    width: 100%;
+    position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: black;
     overflow: hidden;
 }
 
@@ -35,23 +38,27 @@ ul.navbar li a:hover {
 }
 
 div {
-    flex: 1;
-    flex-direction: row;
     color: black;
     background-color: white;
 }
-
-.login-box {
-    justify-content: center;
-}
-
-label {
+form {
     display: flex;
-    padding: 14px 16px;
+    flex-direction: column;
+ }
+
+input {
+    color: black;
+    margin: 6px;
 }
 
-h1 {
-    padding: 14px 16px;
+input[type=submit] {
+    padding:5px 15px; 
+    background:black; 
+    color: white;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
 
 span, a {
@@ -59,14 +66,10 @@ span, a {
 }
 
 footer {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
     background-color: black;
     color: white;
     position: fixed;
-    right: 10px;
-    left: 10px;
+    display: flex;
     bottom: 10px;
     width: 100%;
 }
