@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik Microbe&display=swap');
 
+main {
+    flex: 1 calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
 body {
     font-family: 'IBM Plex Mono';
-  }
+}
 
-  ul.navbar {
+ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -27,4 +35,21 @@ ul.navbar li a {
 ul.navbar li a:hover {
     background-color: #ffffff;
     color: black;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: black;
+    color: white;
 }
