@@ -39,3 +39,11 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 - **DB:** Table on high score page for player high scores represents data stored in DB
 - **WebSocket:** The current players scores will be updated real time in the database
 
+  ### CSS deliverable
+**For the CSS deliverable I styled the application into a more final presentation**
+- **Header, footer, and main:** All styled
+- **Navigation Elements:** navigation bar at the top of each page, with links to other pages
+- **Responsive to window resizing:** Elements on each page adjust to window resizing, as well as navigation bars permenantely on top and bottom
+- **Application Elements:** Items spaced and centered appropriately in page
+-  **Application text content** Updated how to play text for simpler user interface, as well as gave it css animation
+- **Application imagees** image on gameplay page is responsive to page resizing, although (purposely) not centered
