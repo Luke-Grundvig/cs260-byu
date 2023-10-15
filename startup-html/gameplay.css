@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik Microbe&display=swap');
+  
+main {
+    flex: 1 calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
     font-family: 'IBM Plex Mono';
-  }
+}
 
-  ul.navbar {
+ul.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -27,4 +39,70 @@ ul.navbar li a {
 ul.navbar li a:hover {
     background-color: #ffffff;
     color: black;
+}
+
+img {
+    max-width: 500px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.banner p1 {
+    color: black;
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+    animation: 5s steps(60, end) typing;
+}
+    
+.banner p2 {
+    color: white;
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+    animation: 4s steps(60, end) typing;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+    
+.blinkcursor1 {
+     animation: blink 1s 4;
+     color: white;
+}
+.blinkcursor2 {
+     animation: blink 1s infinite;
+     color: white;
+     animation-delay: 5s;
+}
+    
+@keyframes typing {
+    from {
+        max-width: 0%;
+        color: black;
+    }
+    to {
+        max-width: 100%;
+        color : black;
+    }
+}
+
+@keyframes blink{
+    to {color: black;}
+}
+
+footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    overflow: hidden;
 }
