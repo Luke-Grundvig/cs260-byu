@@ -15,3 +15,9 @@ for acessing shell of website
 Use orientation and aside to hide parts if the screen is too small
 realtime colors gives good color waves and matching colors
 
+DOM: document object model
+how to manipulate DOM:
+    - use recursion (for loop in htis case, auto) ex. for each child print the child
+
+
+    .json() is a javascript function that takes a json string and returns an object
