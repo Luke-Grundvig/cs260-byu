@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html>
+    
 <head>
     <title>Western-Showdown.click</title>
     <link rel="stylesheet" href="gameplay.css" />
-</head>
-<body>
+    <script src="gameplay.js"></script>
+
     <ul class="navbar">
         <li><a href="index.html">Login</a></li>
         <li><a href="highscore.html">High Scores</a></li>
         <li><a href="gameplay.html">Gameplay</a></li>
     </ul>
 
-    
-    <div id="login" style="display: none;">
-        <h1>Login Page</h1>
+</head>
+
+<body>
+
+    <div class="outlaw">
+        <img alt="Outlaw" src="https://img.freepik.com/premium-photo/silhouette-man-cowboy-hat-standing-hill-generative-ai_900370-38005.jpg"/>
     </div>
 
-    <div id="highscore" style="display: none;">
-        <h1>High Score Page</h1>
-    </div>
-
-    <div id="gameplay" style="display: none;">
-        <h1>Gameplay Page</h1>
-    </div>
-
-    <img alt="Outlaw" src="https://img.freepik.com/premium-photo/silhouette-man-cowboy-hat-standing-hill-generative-ai_900370-38005.jpg" />
-
-    <div class="banner">
-    <p1>When you see it's time to draw, you best be clicking faster than you can think    .   .   .<span class="blinkcursor1"> 
-        |</span></p1>
-    <p2>else you not gonna last long in these parts<span class="blinkcursor2"> 
-        |</span></p2>
+    <div class ="popup"> 
+        <h2>How to play</h2>
+        <div class="banner">
+            <p1>When it says to draw, all you gotta do is click .   .   .<span class="blinkcursor1">|</span></p1>
+            <p2>fast.<span class="blinkcursor2">|</span></p2>
+        </div>
+        <button id="close" onclick="closePopup()">&times;</button>
     </div>
 </body>
+
 <footer>
+    <span>By Luke Grundvig</span>
+    <span>GITHUB LINK: </span>
+    <a href="https://github.com/Luke-Grundvig/cs260-byu">GitHub</a>
 </footer>
+
 </html>

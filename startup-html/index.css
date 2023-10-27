@@ -41,10 +41,11 @@ div {
     color: black;
     background-color: white;
 }
-form {
+
+div.loginThing {
     display: flex;
     flex-direction: column;
- }
+}
 
 input {
     color: black;
@@ -72,4 +73,9 @@ footer {
     display: flex;
     bottom: 10px;
     width: 100%;
+}
+
+button {
+    background-color: black;
+    color: white;
 }

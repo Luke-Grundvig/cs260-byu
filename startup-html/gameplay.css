@@ -1,26 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik Microbe&display=swap');
   
-main {
-    flex: 1 calc(100vh - 110px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    position: relative;
-}
-
 body {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
     font-family: 'IBM Plex Mono';
+    display: flex;
+    min-width: 375px;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
 }
 
 ul.navbar {
+    top: 10px;
+    width: 100%;
+    position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: black;
     overflow: hidden;
 }
 
@@ -43,9 +39,6 @@ ul.navbar li a:hover {
 
 img {
     max-width: 500px;
-    position: absolute;
-    top: 25%;
-    left: 25%;
 }
 
 .banner p1 {
@@ -57,7 +50,7 @@ img {
     overflow: hidden;
     max-width: 100%;
     display: inline-block;
-    animation: 5s steps(60, end) typing;
+    animation: 3s steps(45, end) typing;
 }
     
 .banner p2 {
@@ -69,7 +62,7 @@ img {
     overflow: hidden;
     max-width: 100%;
     display: inline-block;
-    animation: 4s steps(60, end) typing;
+    animation: 2s steps(30, end) typing;
     animation-delay: 4s;
     animation-fill-mode: forwards;
 }
@@ -81,7 +74,7 @@ img {
 .blinkcursor2 {
      animation: blink 1s infinite;
      color: white;
-     animation-delay: 5s;
+     animation-delay: 6s;
 }
     
 @keyframes typing {
@@ -99,10 +92,47 @@ img {
     to {color: black;}
 }
 
+span, a {
+    padding: 10px;
+}
+
 footer {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #000000;
-    overflow: hidden;
+    background-color: black;
+    color: white;
+    position: fixed;
+    display: flex;
+    bottom: 10px;
+    width: 100%;
+}
+
+.popup {
+    background-color: white;
+    width: 450px;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    border: thick solid black;
+}
+
+.popup button {
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    left: 92%;
+}
+
+.popup p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
 }

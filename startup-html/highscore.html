@@ -3,83 +3,49 @@
 <head>
     <title>Western-Showdown.click</title>
     <link rel="stylesheet" href="highscore.css" />
-</head>
-<body>
+    <script src="highscore.js"></script>
+
     <ul class="navbar">
         <li><a href="index.html">Login</a></li>
         <li><a href="highscore.html">High Scores</a></li>
         <li><a href="gameplay.html">Gameplay</a></li>
     </ul>
 
-    
-    <div id="login" style="display: none;">
-        <h1>Login Page</h1>
-    </div>
-
-    <div id="highscore" style="display: none;">
-        <h1>High Score Page</h1>
-    </div>
-
-    <div id="gameplay" style="display: none;">
-        <h1>Gameplay Page</h1>
-    </div>
-
 </head>
+
 <body>
+
+    <p class="white">...</p>
+
     <h1>HIGH SCORES</h1>
     <table>
         <thead>
             <tr>
+                <th>PLACE</th>
                 <th>USER</th>
                 <th>SCORE</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Jake</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>Bilbo</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Player 1</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>USER ERROR</td>
-                <td>1</td>
-            </tr>
-        </tbody>
+        <tbody id="scores"></tbody>
     </table>
 
     <h2>FASTEST SHOOTERS</h2>
     <table>
         <thead>
             <tr>
+                <th>PLACE</th>
                 <th>USER</th>
                 <th>FASTEST SHOT</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Jake</td>
-                <td>.002</td>
-            </tr>
-            <tr>
-                <td>Bilbo</td>
-                <td>.002</td>
-            </tr>
-            <tr>
-                <td>Player 1</td>
-                <td>.33</td>
-            </tr>
-            <tr>
-                <td>USER ERROR</td>
-                <td>.0012</td>
-            </tr>
-        </tbody>
+        <tbody id="times"></tbody>
     </table>
 </body>
+
+<footer>
+    <span>By Luke Grundvig</span>
+    <span>GITHUB LINK: </span>
+    <a href="https://github.com/Luke-Grundvig/cs260-byu">GitHub</a>
+</footer>
+
 </html>
