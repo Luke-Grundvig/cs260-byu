@@ -3,11 +3,11 @@ var duration = 5;
 var startTime;
 var ended = true;
 
-document.querySelector(".clickBox").addEventListener("click", function(e) {
+function addScore(){
     if (!ended) {
         score++;
     }
-});
+};
 
 window.addEventListener("load", function() {
     this.setTimeout(
