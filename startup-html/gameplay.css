@@ -62,7 +62,7 @@ img {
     overflow: hidden;
     max-width: 100%;
     display: inline-block;
-    animation: 2s steps(30, end) typing;
+    animation: 3s steps(50, end) typing;
     animation-delay: 4s;
     animation-fill-mode: forwards;
 }
@@ -108,6 +108,7 @@ footer {
 .popup {
     background-color: white;
     width: 450px;
+    height: 300px;
     padding: 10px;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -135,4 +136,34 @@ footer {
     font-size: 14px;
     text-align: justify;
     margin: 20px 0;
+}
+
+.popup2 {
+    background-color: white;
+    text-align: center;
+    width: 450px;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 70%;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    border: thick solid black;
+}
+
+.clickBox {
+    background-color: transparent;
+    width: 450px;
+    height:450px;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    cursor: pointer;
 }
