@@ -47,3 +47,11 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 - **Application Elements:** Items spaced and centered appropriately in page
 -  **Application text content** Updated how to play text for simpler user interface, as well as gave it css animation
 - **Application imagees** image on gameplay page is responsive to page resizing, although (purposely) not centered
+
+-   ### JavaScript deliverable
+**For the JavaScript deliverable I used JavaScript to make the application work for a single play through**
+- **login** Takes you to the gameplay page, and saves username/password
+- **Database** Functions in place to store score for highscore board, currently storing localy, (and not working) but will be updated to database later.
+- **WebSocket** setIntervals function and some CSS are meant to represent updates from other players. Will be replaced with WebSocket messages.
+- **Application Logic:** Gameplay working, tells you your score and reloads play after finishing.
+
