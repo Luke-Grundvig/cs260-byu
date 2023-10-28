@@ -92,3 +92,7 @@ function updateScores(userName, score, scores) {
 
     return scores;
   }
+
+  function showOtherUserScore() {
+    // add websocket for other user scores to display during play
+  }
