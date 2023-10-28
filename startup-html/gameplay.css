@@ -178,3 +178,21 @@ footer {
     align-items: unset;
     border: thick solid black;
 }
+
+.players {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .player-name {
+    color: black;
+  }
+  
+  #player-messages {
+    padding-top: 0.25em;
+    opacity: 0.7;
+  }

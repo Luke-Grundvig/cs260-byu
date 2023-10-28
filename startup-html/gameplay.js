@@ -91,8 +91,15 @@ function updateScores(userName, score, scores) {
     }
 
     return scores;
-  }
+}
 
-  function showOtherUserScore() {
-    // add websocket for other user scores to display during play
-  }
+function showOtherUserScore() {
+    // add websocket for other user scores to display during play to replace setIntervals
+}
+
+setIntervals(() => {
+    const score = Math.floor(Math.random() * 3000);
+    const chatText = document.querySelector('#player-messages');
+    chatText.innerHTML =
+      `<div class="event"><span class="player-event">Eich</span> scored ${score}</div>` + chatText.innerHTML;
+}, 5000);
