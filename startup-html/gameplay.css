@@ -167,3 +167,14 @@ footer {
     align-items: unset;
     cursor: pointer;
 }
+
+.playAgainBut {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    border: thick solid black;
+}
