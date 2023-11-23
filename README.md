@@ -55,3 +55,10 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 - **WebSocket** setIntervals function and some CSS are meant to represent updates from other players. Will be replaced with WebSocket messages.
 - **Application Logic:** Gameplay working, tells you your score and reloads play after finishing.
 
+-   ### Service deliverable
+**For the Service deliverable I added backend endpoints for updatind high scores**
+- **Node.js/Express HTTP service** Added.
+- **Static middleware for frontend** Added.
+- **Calls to third party endpoints** Retrieves quotes from quotabele and displays them on the login page.
+- **Backend service endpoints** Placeholders for login that store current user on server.
+- **Frontend calls service endpoints** Uses fetch function to call for highscores.
