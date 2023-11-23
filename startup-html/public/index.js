@@ -24,3 +24,5 @@ function login() {
         containerEl.appendChild(authorEl);
       });
   }
+
+  displayQuote();

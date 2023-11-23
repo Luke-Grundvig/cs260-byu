@@ -79,3 +79,13 @@ button {
     background-color: black;
     color: white;
 }
+
+.quote-box {
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+  }
+  
+  .quote {
+    font-style: italic;
+  }
