@@ -52,17 +52,23 @@ function endGame() {
     }, 20);
 }
 
-function saveScore(score) {
+async function saveScore(score) {
+  const userName = this.getPlayerName();
+  const date = new Date().toLocaleDateString();
+  const newScore = {name: userName, score: score, date: date};
 
-    const userName = this.getPlayerName();
-    let scores = [];
-    const scoresText = localStorage.getItem('scores');
-    if (scoresText) {
-      scores = JSON.parse(scoresText);
-    }
-    scores = this.updateScores(userName, score, scores);
+  try {
+    const response = await fetch('/api/score', {
+      method: 'POST',
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify(newScore),
+    });
 
+    const scores = await response.json();
     localStorage.setItem('scores', JSON.stringify(scores));
+  } catch {
+    this.updateScoresLocal(newScore);
+  }
 }
 
 function getPlayerName() {
