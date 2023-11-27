@@ -68,3 +68,11 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 - **MongoDB Atlas database:** Added.
 - **Endpoints for data:** Endpoints now process data and send to MongoDB.
 - **Stores data in MongoDB:** Scores stored in Mongo.
+
+### Login deliverable
+**For the Login deliverable I associated scores with users**
+- **User registration:** Added.
+- **Existing User:** Persistant login via database.
+- **Use MongoDB to store credentials:** Users stored in MongoDB.
+- **Existing User:** Persistant login via database.
+- **Restricts functionality:** Players can't ordinarily reach play screen from main without logging in, scores are not stored for unregistered users, and unregistered users cannot see updated scoreboard.
