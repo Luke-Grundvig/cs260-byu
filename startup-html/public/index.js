@@ -1,14 +1,14 @@
-(async () => {
+async function loadLogin() {
   const userName = localStorage.getItem('userName');
   if (userName) {
     document.querySelector('#playerName').textContent = userName;
-    setDisplay('loginControls', 'none');
+    setDisplay('loginThing', 'none');
     setDisplay('playControls', 'block');
   } else {
-    setDisplay('loginControls', 'block');
+    setDisplay('loginThing', 'block');
     setDisplay('playControls', 'none');
   }
-})();
+}
 
 async function loginUser() {
   loginOrCreate(`/api/auth/login`);
@@ -91,6 +91,7 @@ function displayQuote(data) {
 }
 
 displayQuote();
+loadLogin();
 
 //curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 //. ~/.nvm/nvm.sh
