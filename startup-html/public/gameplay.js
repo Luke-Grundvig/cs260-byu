@@ -2,6 +2,8 @@ var score;
 var duration = 5;
 var startTime;
 var ended = true;
+const GameEndEvent = 'gameEnd';
+const GameStartEvent = 'gameStart';
 
 function addScore(){
     if (ended) {
@@ -33,6 +35,8 @@ function startGame() {
     score = 0;
     ended = false;
 
+    this.broadcastEvent(this.getPlayerName(), GameStartEvent, {});
+
     startTime = new Date().getTime();
     var timerId = setInterval(function() {
         var total = (new Date().getTime() - startTime) / 1000;
@@ -63,6 +67,7 @@ async function saveScore(score) {
       headers: {'content-type': 'application/json'},
       body: JSON.stringify(newScore),
     });
+    this.broadcastEvent(userName, GameEndEvent, newScore);
 
     const scores = await response.json();
     localStorage.setItem('scores', JSON.stringify(scores));
@@ -102,13 +107,36 @@ function updateScoresLocal(newScore) {
     localStorage.setItem('scores', JSON.stringify(scores));
 }
 
-function showOtherUserScore() {
-    // add websocket for other user scores to display during play to replace setIntervals
+function configureWebSocket() {
+  const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+  this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+  this.socket.onopen = (event) => {
+    this.displayMsg('system', 'game', 'connected');
+  };
+  this.socket.onclose = (event) => {
+    this.displayMsg('system', 'game', 'disconnected');
+  };
+  this.socket.onmessage = async (event) => {
+    const msg = JSON.parse(await event.data.text());
+    if (msg.type === GameEndEvent) {
+      this.displayMsg('player', msg.from, `scored ${msg.value.score}`);
+    } else if (msg.type === GameStartEvent) {
+      this.displayMsg('player', msg.from, `started a new game`);
+    }
+  };
 }
 
-setIntervals(() => {
-    const score = Math.floor(Math.random() * 3000);
-    const chatText = document.querySelector('#player-messages');
-    chatText.innerHTML =
-      `<div class="event"><span class="player-event">Eich</span> scored ${score}</div>` + chatText.innerHTML;
-}, 5000);
+function displayMsg(cls, from, msg) {
+  const chatText = document.querySelector('#player-messages');
+  chatText.innerHTML =
+    `<div class="event"><span class="${cls}-event">${from}</span> ${msg}</div>` + chatText.innerHTML;
+}
+
+function broadcastEvent(from, type, value) {
+  const event = {
+    from: from,
+    type: type,
+    value: value,
+  };
+  this.socket.send(JSON.stringify(event));
+}
