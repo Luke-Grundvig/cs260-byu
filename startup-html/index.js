@@ -7,12 +7,14 @@ const { peerProxy } = require('./peerProxy.js');
 
 const authCookieName = 'token';
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
-const apiRouter = express.Router();
+
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static('public'));
 app.set('trust proxy', true);
+
+const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 apiRouter.post('/auth/create', async (req, res) => {

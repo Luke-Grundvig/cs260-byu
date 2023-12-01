@@ -15,6 +15,7 @@ function addScore(){
 };
 
 window.addEventListener("load", function() {
+  configureWebSocket();
     this.setTimeout(
         function open(event){
             document.querySelector(".popup").style.display = "block";
@@ -35,7 +36,7 @@ function startGame() {
     score = 0;
     ended = false;
 
-    this.broadcastEvent(this.getPlayerName(), GameStartEvent, {});
+    broadcastEvent(this.getPlayerName(), GameStartEvent, {});
 
     startTime = new Date().getTime();
     var timerId = setInterval(function() {
@@ -67,12 +68,13 @@ async function saveScore(score) {
       headers: {'content-type': 'application/json'},
       body: JSON.stringify(newScore),
     });
-    this.broadcastEvent(userName, GameEndEvent, newScore);
+
+    broadcastEvent(userName, GameEndEvent, newScore);
 
     const scores = await response.json();
     localStorage.setItem('scores', JSON.stringify(scores));
   } catch {
-    this.updateScoresLocal(newScore);
+    updateScoresLocal(newScore);
   }
 }
 
@@ -111,17 +113,17 @@ function configureWebSocket() {
   const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
   this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
   this.socket.onopen = (event) => {
-    this.displayMsg('system', 'game', 'connected');
+    displayMsg('system', 'game', 'connected');
   };
   this.socket.onclose = (event) => {
-    this.displayMsg('system', 'game', 'disconnected');
+    displayMsg('system', 'game', 'disconnected');
   };
   this.socket.onmessage = async (event) => {
     const msg = JSON.parse(await event.data.text());
     if (msg.type === GameEndEvent) {
-      this.displayMsg('player', msg.from, `scored ${msg.value.score}`);
+      displayMsg('player', msg.from, `scored ${msg.value.score}`);
     } else if (msg.type === GameStartEvent) {
-      this.displayMsg('player', msg.from, `started a new game`);
+      displayMsg('player', msg.from, `started a new game`);
     }
   };
 }
