@@ -207,3 +207,8 @@ drwx------+  4 lukegrundvig  staff    128 Oct 28 20:25 .Trash
 
 34. What will the following code using Promises output when executed?
     Guess we'll find out, hopefully.
+
+    include a jsx file for every component you have
+    current javascript code would become a component
+    
+    basically the html will only have the root component that will get changed by the javascript to display everything else
