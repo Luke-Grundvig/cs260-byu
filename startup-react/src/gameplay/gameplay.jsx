@@ -6,7 +6,7 @@ export function Gameplay() {
 
     const [score, setScore] = useState(0);
     const [duration] = useState(5);
-    const [startTime, setStartTime] = useState(null);
+    const [startTime, setStartTime] = useState(0);
     const [ended, setEnded] = useState(true);
   
     const GameEndEvent = 'gameEnd';
@@ -154,7 +154,7 @@ export function Gameplay() {
         <img className = "image" alt="Outlaw" src="https://img.freepik.com/premium-photo/silhouette-man-cowboy-hat-standing-hill-generative-ai_900370-38005.jpg"/>
     </div>
 
-    <div className="clickBox" onclick="addScore()"></div>
+    <div className="clickBox" onClick={() => addScore()}></div>
     <div id="player-messages"></div>
     <div className="popup"> 
         <h2>How to play</h2>
@@ -162,7 +162,7 @@ export function Gameplay() {
             <p1>In this town it's not about who shoots the fastest .   .   .<span className="blinkcursor1">|</span></p1>
             <p2>it's who shoots the most. Fire on 'Draw'.<span className="blinkcursor2">|</span></p2>
         </div>
-        <button id="close" onclick="closePopup()">&times;</button>
+        <button onClick={() => closePopup()}>&times;</button>
     </div>
 
     <h1 className="popup2">Steady</h1>

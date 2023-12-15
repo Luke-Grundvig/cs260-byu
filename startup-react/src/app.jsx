@@ -14,17 +14,16 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className='body bg-dark text-light'>
+      <div>
       <header>
         <title>Western-Showdown.click</title>
         <link rel="stylesheet" href="highscore.css" />
-        <script src="highscore.js"></script>
 
         <ul class="navbar">
             <li>
-              <NavLink to='login'>
-                Login
-              </NavLink>
+            <NavLink to=''>
+                  Login
+                </NavLink>
             </li>
             <li>
               <NavLink to='highscore'>
@@ -56,7 +55,7 @@ function App() {
             exact
           />
           <Route path='/gameplay' element={<Gameplay userName={userName} />} />
-          <Route path='/highscores' element={<Highscore />} />
+          <Route path='/highscore' element={<Highscore />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
 

@@ -3,10 +3,11 @@ import React from 'react';
 import { Unauthenticated } from './unauthenticated';
 import { Authenticated } from './authenticated';
 import { AuthState } from './authState';
+import './login.css';
 
 export function Login({ userName, authState, onAuthChange }) {
   return (
-    <main className='container-fluid bg-secondary text-center'>
+    <main>
       <div>
         {authState !== AuthState.Unknown && <h1>WesternShowdown.Click</h1>}
         {authState === AuthState.Authenticated && (

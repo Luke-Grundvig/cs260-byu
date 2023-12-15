@@ -2,7 +2,7 @@ import React from 'react';
 
 import './highscore.css';
 
-export function Scores() {
+export function Highscore() {
   const [scores, setScores] = React.useState([]);
 
   React.useEffect(() => {
@@ -26,7 +26,7 @@ export function Scores() {
       scoreRows.push(
         <tr key={i}>
           <td>{i}</td>
-          <td>{score.name.split('@')[1]}</td>
+          <td>{score.name.split('@')[0]}</td>
           <td>{score.score}</td>
           <td>{score.date}</td>
         </tr>
@@ -41,9 +41,11 @@ export function Scores() {
   }
 
   return (
-    <main className='container-fluid bg-secondary text-center'>
-      <table className='table table-warning table-striped-columns'>
-        <thead className='table-dark'>
+    <main>
+      <div>The secret to winning ... is knowing how to cheat</div>
+      <div></div>
+      <table>
+        <thead>
           <tr>
             <th>#</th>
             <th>Name</th>

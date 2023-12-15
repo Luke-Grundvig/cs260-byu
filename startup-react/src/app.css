@@ -1,24 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik Microbe&display=swap');
 
-body {
+#root {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.body {
     font-family: 'IBM Plex Mono';
     display: flex;
-    min-width: 375px;
-    min-height: 400px;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    min-width: 375px;
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 ul.navbar {
-    top: 10px;
     width: 100%;
-    position: fixed;
-    list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: black;
-    overflow: hidden;
+    flex: 1;
+    display: flex;
+    /*  overwrite Bootstrap so the menu does not wrap */
+    flex-direction: row !important;
+    list-style: none;
 }
 
 ul.navbar li {
@@ -29,7 +35,6 @@ ul.navbar li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
 }
 
@@ -49,43 +54,46 @@ div.loginThing {
 
 input {
     color: black;
-    margin: 6px;
 }
 
 input[type=submit] {
-    padding:5px 15px; 
     background:black; 
     color: white;
     border:0 none;
     cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
 }
 
-span, a {
-    padding: 10px;
-}
 
 footer {
     background-color: black;
     color: white;
-    position: fixed;
     display: flex;
-    bottom: 10px;
-    width: 100%;
+    position: fixed;
 }
 
 button {
     background-color: black;
     color: white;
 }
-
-.quote-box {
-    margin-top: 1em;
-    padding: 0.5em;
-    border-radius: 5px;
-}
   
-.quote {
-    font-style: italic;
-}
+  header {
+    position: fixed;
+    flex: 0 80px;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  @media (max-height: 600px) {
+    header {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+  }
