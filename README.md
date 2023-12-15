@@ -76,3 +76,10 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 - **Use MongoDB to store credentials:** Users stored in MongoDB.
 - **Existing User:** Persistant login via database.
 - **Restricts functionality:** Players can't ordinarily reach play screen from main without logging in, scores are not stored for unregistered users, and unregistered users cannot see updated scoreboard.
+
+### DB deliverable
+**For the Websocket deliverable I added a text element in the gameplay tab**
+- **Backend listens for WebSocket connection:** Added.
+- **Frontend makes WebSocket connection:** Added in gameplay files.
+- **Data sent over WebSocket connection:** Players starting games, and their scores are sent.
+- **WebSocket data displayed:** Data mentioned is displayed on the gameplay page, next to the 'outlaw'. Because the gameplay uses page reloads to reset, it's a little unorthodox and resets but it does load. Especially if you log in one account and play on another while the first sits.
