@@ -46,6 +46,7 @@ MIDTERM:
 
 5. Given this HTML and this CSS how will the images be displayed using flex?
 
+
 6. What does the following padding CSS do?
     padding options:
     + length - specifies a padding in px, pt, cm, etc.
@@ -212,3 +213,163 @@ drwx------+  4 lukegrundvig  staff    128 Oct 28 20:25 .Trash
     current javascript code would become a component
     
     basically the html will only have the root component that will get changed by the javascript to display everything else
+
+
+
+FINAL EXAM:
+
+1. What ports are used for HTTP, HTTPS, SSH?
+    Http: 80, HTTPS: 443, SSH: 22
+
+2. What do HTTP status codes in the 300, 400, 500 range indicate?
+    300: redirection
+    400: client error  Each of these is the range of the number, not those numbers exactly
+    500: server error
+
+3. What does the HTTP header content-type allows you to do?
+    Tells you what type of content you're dealing with/allows you to specify the type of content you're sending (HTML, plaintext)
+
+4. What do the following attributes of a cookie do?
+        Domain: maps to domain cookie is coming form 
+        Path: path where the cookie is generated (the end part past)
+        SameSite: only return the cookie to the domain it is generated with
+        HTTPOnly: tells browser do not allow JavaScript to run on the browser, so it can read the cookie
+
+5. Assuming the following Express middleware, what would be the console.log output for an HTTP GET request with a URL path of /foo/bar?
+    will be presented with code that has consle logs for different functions. Need to determine what functions are called and in what order
+    be careful with what the method is and path
+    it will go to the use, then post
+
+6. Given the following Express service code: What does the following JavaScript fetch return?
+        In general fetch (a front end function) will return the results of communication with the server (whether status code or actual information)
+
+        Express service code examples : app.use(express.json());  app.set('trust proxy', true);    apiRouter.post etc *** finish this one
+        
+7. Given the following MongoDB query
+
+        { cost: { $gt: 10 }, name: /fran.*/}
+
+        . - any character
+        * - any number of characters
+        grabs anything greater than 10 and name has fran with any wildcard character after, then returns an array of all the matching ones
+
+    select all of the matching documents.
+
+
+8. How should you store user passwords in a database?
+    hash with salt
+
+9. Assuming the following Node.js service code is executing with websockets, what will be logged to the console of the web browser?
+    study what happens on connect, disconnect and message (on.connection, on.Message, on.close)
+
+10. What is the WebSocket protocol used for?
+    calls from client to server, both can send a message
+
+11. What is JSX and how are the curly braces rendered?
+    javaScript and HTML combined (anything after the return is rendered to the screen, even if you put a seperate return outside the ())
+
+12. Assuming a HTML document with a <div id="root"></div> element, what content will the following React component generate?
+
+      function Welcome(props) {
+        return <h1>Hello, {props.name}</h1>;
+      }
+      function App() {
+        return (
+          <div>
+            <Welcome name="Sara" />
+            <Welcome name="Cahal" />
+            <Welcome name="Edite" />
+          </div>
+        );
+      }
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+
+
+    Hello, Sara
+    Hello, Cahal
+    Hello, Edite
+
+
+13. Assuming a HTML document with a <div id="root"></div> element, what content will the following React component generate?
+
+    function Numbers() { 
+      const numbers = [1, 2, 3, 4, 5];
+      const listItems = numbers.map((number) =>
+        <li>{number}</li>
+      );
+      return(<ul>{listItems}</ul>)
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root')); 
+    root.render(<Numbers/>);
+
+    -1
+    -2
+    -3      (bullet points instead of dashes, as it's unordered it's bulletpoints as opposed to an ol (ordered list) which would return by #)
+    -4      (IE 1. 1   2. 2   3. 3 etc)
+    -5
+
+
+14. What does the following React component do?
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"  
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+returns count, and each time you click the button it will increase by nuber of times the button is clicked (so it returns the counter and the button)
+
+15. What are React Hooks used for?
+    you are modifying the state of a component.
+
+    basically they handle the state and handle the life cycle events (onCreate, onDestroy, reRender)
+
+16. What is the useEffect hook used for?
+    *** look this up
+
+17. What does this code do?
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blogs" element={<Blogs />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+displays things based on what path is envoked
+ex. / renders layout and home (home is only rendered if it's just the slash)
+    /user renders NoPage (it isn't specified)
+    /contact renders contact
+    etc
+
+18. What role does npm play in web development?
+    it manages your node packages and allows you to download external packages
+
+19. What does package.json do in a npm project?
+    holds your third party packages (lists them), tells you what packages/scripts you can use, name version description and what file to run project
+
+20. What does the fetch function do?
+
+
+21. What does node.js do?
+    runs the server
+
+22. What does Vite do?
+    allows you to bundle code (which includes react components) together for production so it can be deployed to a server
+    transposes jsx code into javascript so it can be run on a server
