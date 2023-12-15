@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik Microbe&display=swap');
+  
+body {
+    font-family: 'IBM Plex Mono';
+    display: flex;
+    min-width: 375px;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.navbar {
+    top: 10px;
+    width: 100%;
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+img {
+    max-width: 500px;
+}
+
+.banner p1 {
+    color: black;
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+    animation: 3s steps(45, end) typing;
+}
+    
+.banner p2 {
+    color: white;
+    font-size: 15px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    max-width: 100%;
+    display: inline-block;
+    animation: 3s steps(50, end) typing;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+    
+.blinkcursor1 {
+     animation: blink 1s 4;
+     color: white;
+}
+.blinkcursor2 {
+     animation: blink 1s infinite;
+     color: white;
+     animation-delay: 6s;
+}
+    
+@keyframes typing {
+    from {
+        max-width: 0%;
+        color: black;
+    }
+    to {
+        max-width: 100%;
+        color : black;
+    }
+}
+
+@keyframes blink{
+    to {color: black;}
+}
+
+span, a {
+    padding: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    position: fixed;
+    display: flex;
+    bottom: 10px;
+    width: 100%;
+}
+
+.popup {
+    background-color: white;
+    width: 450px;
+    height: 300px;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    border: thick solid black;
+}
+
+.popup button {
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: black;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    left: 92%;
+}
+
+.popup p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+}
+
+.popup2 {
+    background-color: white;
+    text-align: center;
+    width: 450px;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 70%;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    border: thick solid black;
+}
+
+.clickBox {
+    background-color: transparent;
+    height: 80vh;
+    width: 100vw;
+    padding: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    cursor: pointer;
+}
+
+.playAgainBut {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: unset;
+    border: thick solid black;
+}
+
+.players {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .player-name {
+    color: black;
+  }
+  
+  #player-messages {
+    padding-top: 0.25em;
+    opacity: 0.7;
+  }
