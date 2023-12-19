@@ -261,6 +261,8 @@ FINAL EXAM:
 
 9. Assuming the following Node.js service code is executing with websockets, what will be logged to the console of the web browser?
     study what happens on connect, disconnect and message (on.connection, on.Message, on.close)
+    Connect: The connection is established after the connect is successfully completed.
+Disconnect: The disconnect route is executed after the connection is closed. The connection can be closed by the server or by the client. The server only receives a disconnect message if the client sends it.
 
 10. What is the WebSocket protocol used for?
     calls from client to server, both can send a message
@@ -332,8 +334,25 @@ returns count, and each time you click the button it will increase by nuber of t
 
     basically they handle the state and handle the life cycle events (onCreate, onDestroy, reRender)
 
+     allow you to use state and other React features without writing a class. They were introduced in React 16.8 and have since become a popular way to write React components.
+Here are some of the most common uses for React Hooks:
+Managing state:
+The useState hook allows you to manage state in functional components. This is useful for components that need to keep track of data, such as a counter or a form.
+Handling side effects:
+The useEffect hook allows you to perform side effects in functional components. This includes things like fetching data from an API, setting up a subscription, or updating the DOM.
+Using context:
+The useContext hook allows you to access context values in functional components. This is useful for components that need to share data with other components in the tree.
+Implementing custom functionality:
+You can also use hooks to implement custom functionality in your React components. For example, you could create a custom hook to handle form validation or to track the scroll position of a component.
+Overall, React Hooks are a powerful tool that can help you write more concise and reusable React components.
+
 16. What is the useEffect hook used for?
-    *** look this up
+   allows you to perform side effects in your components. Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+   Fetching data
+Directly updating the DOM
+Timers
+Subscribing to events
+Manipulating the DOM
 
 17. What does this code do?
 
@@ -365,11 +384,22 @@ ex. / renders layout and home (home is only rendered if it's just the slash)
     holds your third party packages (lists them), tells you what packages/scripts you can use, name version description and what file to run project
 
 20. What does the fetch function do?
-
+make asynchronous requests to the server and load the information that is returned by the server onto the web pages.
+request data from a server. The request can be for any type of API that returns data in JSON or XML
+The fetch function makes a GET request. It can also be used to make asynchronous requests to the server and load the information returned by the server onto web pages.
 
 21. What does node.js do?
     runs the server
 
+    Node.js
+ is an open-source, cross-platform
+ JavaScript runtime environment
+ that executes JavaScript code outside of a browser. It is built on Chrome's V8 JavaScript engine
+ and uses an event
+-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js is commonly used for developing web servers
+ and networking applications, but it can also be used for a variety of other tasks, such as data streaming, command-line tools, and mobile app development.
+
 22. What does Vite do?
     allows you to bundle code (which includes react components) together for production so it can be deployed to a server
     transposes jsx code into javascript so it can be run on a server
+    Vite allows for Hot Module Replacement (HMR) of JavaScript, CSS, and Twig during development and optimized production builds. It also offers modern features like SSR and Serverless Functions out of the box.
