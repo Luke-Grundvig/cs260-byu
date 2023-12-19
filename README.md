@@ -85,7 +85,7 @@ A web based throwback game to an old western showdown! Instead of the quickest s
 - **WebSocket data displayed:** Data mentioned is displayed on the gameplay page, next to the 'outlaw'. Because the gameplay uses page reloads to reset, it's a little unorthodox and resets but it does load. Especially if you log in one account and play on another while the first sits.
 
 ### React deliverable
-**For the Websocket deliverable I converted the app to react**
+**For the React deliverable I converted the app to react**
 - **Bundled and transpiled:** Followed the given tutorial.
 - **Components:** Login, Highscores, and Gameplay are components. More than one of them fully functioning.
 - **Router:** Routing between Login and Gameplay directly. Highscore through navbar.
